@@ -9,7 +9,7 @@ get '/' do
   erb :base
 end
 
-get '/notes/*/*' do
+get '/*/*' do
   path = "notes/#{params[:splat].first}/#{params[:splat].last}"
   @md = markdown path.to_sym
   erb :base
